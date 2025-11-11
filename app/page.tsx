@@ -53,7 +53,7 @@ export default function Page() {
           enableBlur={true}
           baseRotation={0}
           blurStrength={10}
-          containerClassName="h-full w-[90%] flex items-center justify-center mx-auto"
+          containerClassName="h-full w-[80%] flex items-center justify-center mx-auto"
           textClassName="text-xl text-neutral-300"
         >
           Budúcnosť bývania je tu! Jedna platforma, nekonečné možnosti pre váš
