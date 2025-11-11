@@ -42,7 +42,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.15 }}
             exit={{ opacity: 0 }}
-            className="top-0 left-0 h-full w-full bg-black fixed z-9999 flex flex-col justify-center items-center"
+            className="top-0 left-0 size-full bg-black text-neutral-100 fixed z-9999 flex flex-col justify-center items-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-8 text-neutral-100 absolute top-5 right-5 cursor-pointer"
+              className="size-8 p-0.5 hover:bg-neutral-100/5 rounded-sm cursor-pointer transition-all duration-150 absolute top-6 right-6"
               onClick={handleNavbar}
             > 
               <path
@@ -60,7 +60,7 @@ export default function Navbar() {
               />
             </svg>
             <div className="h-full w-1/2 flex flex-col justify-center text-neutral-100">
-            <h1 className="text-9xl font-thin spacing-wide uppercase">my</h1>
+              <h1 className="text-9xl font-thin spacing-wide uppercase">my</h1>
               <h1 className="text-9xl font-thin spacing-wide uppercase">produkty</h1>
               <h1 className="text-9xl font-thin spacing-wide uppercase">cenník</h1>
               <h1 className="text-9xl font-thin spacing-wide uppercase">kontakt</h1>
