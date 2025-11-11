@@ -1,55 +1,124 @@
 "use client";
-import { modules1, modules2 } from "@/components/data/modules";
+// // import { Skiper52 } from "@/components/ui/skiper52";
+import { motion } from "motion/react";
+
+import Silk from "@/components/ui/Silk";
+import ASCIIText from "@/components/ui/ASCIIText";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import ScrollVelocity from "@/components/ui/ScrollVelocity";
 
 import Navbar from "@/components/navbar";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { Skiper52 } from "@/components/ui/skiper52";
-
-import { motion } from "motion/react";
+// import IphoneDevice from "@/components/iphone-device";
 
 export default function Page() {
   return (
     <>
+      {/* Intro */}
       <section
-        className="h-screen w-full flex flex-col items-center justify-center text-white bg-gradient-to-b from-blue-100 via-blue-100 to-neutral-50"
         id="Intro"
+        className="h-screen w-full relative flex flex-col justify-center items-center border-b border-neutral-950"
       >
+        {/* Background */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          className="size-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="w-[calc(100%-4rem)] h-[calc(100%-4rem)] rounded-4xl border-blue-300 shadow-xs bg-gradient-to-br from-blue-400 via-blue-300 to-neutral-50 relative flex flex-col items-center overflow-hidden"
         >
-          <Navbar />
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.15, delay: 0.6 }}
-            className="absolute bottom-0 left-5"
-          >
-            <InfiniteMovingCards
-              items={modules1}
-              direction="right"
-              speed="normal"
-            />
-            <InfiniteMovingCards
-              items={modules2}
-              direction="left"
-              speed="slow"
-            />
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.15, delay: 0.5 }}
-            className="absolute top-2/6 left-5 flex flex-col gap-3"
-          >
-            <h1 className="text-9xl font-thin spacing-wide">UVTU</h1>
-            <p className="text-4xl font-thin ml-2.5">Smart home riešenia</p>
-          </motion.div>
+          <Silk
+            speed={5}
+            scale={1}
+            color="#171717"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
+        </motion.div>
+
+        {/* Navbar */}
+        <Navbar />
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-full flex"
+        >
+          <ASCIIText text="UVTU" enableWaves={true} asciiFontSize={8} />
         </motion.div>
       </section>
-      <section className="h-[25vh] w-[calc(100%-4rem)] mx-auto" id="Banners">
+      {/* Hero */}
+      <section id="Hero" className="h-screen w-full relative">
+        <ScrollReveal
+          baseOpacity={0}
+          enableBlur={true}
+          baseRotation={0}
+          blurStrength={10}
+          containerClassName="h-full w-[90%] flex items-center justify-center mx-auto"
+          textClassName="text-xl text-neutral-300"
+        >
+          Budúcnosť bývania je tu! Jedna platforma, nekonečné možnosti pre váš
+          domov. Od automatizácie po bezpečnosť, všetko v dokonalej rovnováhe.
+          Vaše zariadenia spolu komunikujú, aby vám uľahčili každý deň. Žite
+          pohodlne, efektívne a s inteligenciou, ktorá pracuje pre vás.
+        </ScrollReveal>
+      </section>
+      {/* About */}
+      <section
+        id="About"
+        className="h-screen w-full relative flex flex-col justify-center items-center border-t border-neutral-950"
+      >
+        {/* Background */}
+        <motion.div
+          className="size-full absolute"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <Silk
+            speed={5}
+            scale={1}
+            color="#171717"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
+        </motion.div>
+
+        {/* Scroll Velocity Text */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.8 }}
+          className="size-full absolute flex items-center overflow-hidden"
+        >
+          <ScrollVelocity
+            texts={[
+              "Bezpečnosť",
+              "Automatizácie",
+              "Inovácie",
+              "Pohodlie",
+              "Efektivita",
+              "Smart Home",
+            ]}
+            velocity={30}
+            className="text-neutral-100/5 uppercase"
+          />
+        </motion.div>
+
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
+          viewport={{ once: true, amount: 0.8 }}
+          className="size-full relative flex flex-col items-center justify-center"
+        >
+          {/* <IphoneDevice/> */}
+        </motion.div>
+      </section>
+      {/*
+             <section className="h-[25vh] w-full mx-auto bg-black" id="Banners">
         <motion.div 
           initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,10 +194,7 @@ export default function Page() {
         <div className="h-full w-full mx-auto flex flex-row items-center justify-center gap-x-6">
           <Skiper52/>
         </div>
-      </section>
-      <section className="" id="">
-
-      </section>
+      </section> */}
     </>
   );
 }

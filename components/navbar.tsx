@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import Logo from "./logo";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -10,42 +11,27 @@ export default function Navbar() {
     document.body.classList.toggle("overflow-hidden");
   }
   return (
-    <>
+    <>      
       <motion.div 
         initial={{ opacity: 0, y: 5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.15, delay: 0.3 }}
-        className="absolute top-6 w-[97%] flex justify-between h-12"
+        className="w-[80%] h-12 flex justify-between items-center absolute top-6 mx-auto text-neutral-100 z-9999"
       >
-        <div className="size-full">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.3}
-            stroke="currentColor"
-            className="size-10"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
-            />
-          </svg>
+        <div className="size-full flex justify-start items-center">
+          <Logo className="text-neutral-100 size-6"/>
         </div>
-        <div className="size-full flex justify-end items-center font-open-sans text-lg text-white">
+        <div className="size-full flex justify-end items-center font-open-sans text-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
+            viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-8 p-1 hover:bg-white/5 rounded-sm cursor-pointer transition-all duration-150"
+            strokeWidth={1.5}
+            stroke="currentColor" 
+            className="size-8 p-0.5 hover:bg-neutral-100/5 rounded-sm cursor-pointer transition-all duration-150" 
             onClick={handleNavbar}
           >
-            <path
-              fillRule="evenodd"
-              d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-              clipRule="evenodd"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </div>
       </motion.div>
@@ -56,7 +42,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.15 }}
             exit={{ opacity: 0 }}
-            className="top-0 left-0 h-full w-full bg-neutral-50 fixed z-1000 flex flex-col justify-center items-center"
+            className="top-0 left-0 h-full w-full bg-black fixed z-9999 flex flex-col justify-center items-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,16 +50,16 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-8 text-neutral-900 absolute top-5 right-5 cursor-pointer"
+              className="size-8 text-neutral-100 absolute top-5 right-5 cursor-pointer"
               onClick={handleNavbar}
-            >
+            > 
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M6 18 18 6M6 6l12 12"
               />
             </svg>
-            <div className="h-full w-1/2 flex flex-col justify-center text-neutral-900">
+            <div className="h-full w-1/2 flex flex-col justify-center text-neutral-100">
             <h1 className="text-9xl font-thin spacing-wide uppercase">my</h1>
               <h1 className="text-9xl font-thin spacing-wide uppercase">produkty</h1>
               <h1 className="text-9xl font-thin spacing-wide uppercase">cenník</h1>
