@@ -1,12 +1,11 @@
 import React, { forwardRef, useMemo, useRef, useLayoutEffect } from 'react';
 import { Canvas, useFrame, useThree, RootState } from '@react-three/fiber';
-// @ts-ignore
+// @ts-expect-error
 import { Color, Mesh, ShaderMaterial } from 'three';
-// @ts-ignore
+// @ts-expect-error
 import { IUniform } from 'three';
 
 type NormalizedRGB = [number, number, number];
-
 
 const hexToNormalizedRGB = (hex: string): NormalizedRGB => {
   const clean = hex.replace('#', '');

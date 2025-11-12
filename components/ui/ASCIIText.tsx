@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-// @ts-ignore
+// @ts-expect-error
 import * as THREE from 'three';
 
 const vertexShader = `
