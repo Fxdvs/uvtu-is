@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+// @ts-ignore
 import * as THREE from 'three';
 
 const vertexShader = `
@@ -433,6 +434,7 @@ class CanvAscii {
   }
 
   clear() {
+    // @ts-ignore
     this.scene.traverse(object => {
       const obj = object as unknown as THREE.Mesh;
       if (!obj.isMesh) return;
