@@ -1,8 +1,6 @@
 import React, { forwardRef, useMemo, useRef, useLayoutEffect } from 'react';
 import { Canvas, useFrame, useThree, RootState } from '@react-three/fiber';
-// @ts-expect-error
 import { Color, Mesh, ShaderMaterial } from 'three';
-// @ts-expect-error
 import { IUniform } from 'three';
 
 type NormalizedRGB = [number, number, number];

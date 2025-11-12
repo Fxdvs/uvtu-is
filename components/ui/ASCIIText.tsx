@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react';
-// @ts-expect-error
 import * as THREE from 'three';
 
 const vertexShader = `
