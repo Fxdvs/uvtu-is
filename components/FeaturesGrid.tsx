@@ -4,12 +4,13 @@ import Link from "next/link";
 
 export default function FeaturesGrid() {
   return (
-    <div className="h-4/6 w-[90%] grid grid-cols-5 grid-rows-3 gap-2">
+    <div className="h-4/6 w-[90%] grid grid-cols-5 grid-rows-3 gap-3">
       {getFeatures().map((f) => (
         <Link
           href={`features/${f.url}`}
           rel="noopener noreferrer"
-          className={`size-full flex flex-col p-5 relative bg-neutral-950/50 backdrop-blur-lg rounded-xl col-span-${f.col} row-span-${f.row} cursor-default`}
+          className={`size-full flex flex-col p-5 relative bg-neutral-950/50 backdrop-blur-lg rounded-xl col-span cursor-default`}
+          style={{ gridColumn: `span ${f.col} / span ${f.col}`, gridRow: `span ${f.row} / span ${f.row}` }}
           key={f.url}
         >
           <GlowingEffect
