@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import Image from "next/image";
+// import Image from "next/image";
 // Backgrounds;
 import Prism from "@/components/ui/Prism";
 // UI
@@ -9,6 +9,8 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import Navbar from "@/components/navbar";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import Footer from "@/components/footer";
+import { GlowingEffect } from "@/components/ui/GlowingEffect";
+import FeatureList from "@/components/FeaturesList";
 
 export default function Page() {
   return (
@@ -114,35 +116,68 @@ export default function Page() {
         </motion.div>
       </section>
       {/* */}
-      <section id="Pricing" className="h-screen w-full flex justify-center items-end">
-          <div className="size-max relative flex">
-            <Image
-              src="/assets/media/desktop-body.png"
-              alt="desktop-body"
-              width={1000}
-              height={1000}
-            />
-            <div className="h-[80%] w-full absolute p-3">
-              <div className="size-full relative flex ">
-                {/* Background */}
-                <Prism
-                  animationType="3drotate"
-                  timeScale={0.5}
-                  height={3.6}
-                  baseWidth={5.0}
-                  scale={3.0}
-                  hueShift={0}
-                  colorFrequency={1}
-                  noise={0.15}
-                  glow={1}
-                />
-                {/* Content */}
-                <div className="size-full absolute flex items-center justify-center">
-                  
-                </div>
-              </div>
-            </div>
+      <section
+        id="Pricing"
+        className="h-screen w-full flex justify-center items-center gap-4 relative"
+      >
+        <div className="bg-neutral-50/10 border border-neutral-50/5 h-[50%] w-96 rounded-2xl flex flex-col relative p-5 gap-y-2 shadow shadow-neutral-50/10">
+          <GlowingEffect
+            spread={75}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+            borderWidth={2.5}
+          />
+          <div className="h-max w-full flex justify-between items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="size-10 text-neutral-100"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8.065 2.016A.13.13 0 0 0 8.002 2v11.983l6.856.017a.12.12 0 0 0 .066-.017.2.2 0 0 0 .054-.06.18.18 0 0 0-.002-.183L8.12 2.073a.15.15 0 0 0-.054-.057zm-1.043-.45a1.13 1.13 0 0 1 1.96 0l6.856 11.667c.458.778-.091 1.767-.98 1.767H1.146c-.889 0-1.437-.99-.98-1.767z" />
+            </svg>
+            <h1 className="text-3xl text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-300 font-semibold uppercase tracking-wide">
+              4999€
+            </h1> 
           </div>
+          <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-300 font-semibold">Basic</h1>
+          <FeatureList/>
+        </div>
+        <div className="bg-neutral-50/10 border border-neutral-50/5 h-[60%] w-96 rounded-2xl flex flex-col relative p-5 gap-y-2">
+          {" "}
+          <GlowingEffect
+            spread={75}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+            borderWidth={2.5}
+          />
+          <div className="h-max w-full flex justify-between items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="size-10 text-neutral-100"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767z"
+              />
+            </svg>
+            <h1 className="text-3xl text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-300 font-semibold uppercase tracking-wide">
+              7499€
+            </h1>
+          </div>
+          <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-300 font-semibold">Extended</h1>
+          <FeatureList extended={true}/>
+        </div>
       </section>
       <Footer />
     </>
