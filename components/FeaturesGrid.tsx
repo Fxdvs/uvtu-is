@@ -9,7 +9,7 @@ export default function FeaturesGrid() {
         <Link
           href={`features/${f.url}`}
           rel="noopener noreferrer"
-          className={`size-full flex flex-col p-5 relative bg-neutral-950/50 backdrop-blur-lg rounded-xl col-span cursor-default`}
+          className={`size-full flex flex-col p-5 relative bg-neutral-50/10 border border-neutral-50/5 backdrop-blur-lg rounded-xl col-span cursor-default`}
           style={{ gridColumn: `span ${f.col} / span ${f.col}`, gridRow: `span ${f.row} / span ${f.row}` }}
           key={f.url}
         >
