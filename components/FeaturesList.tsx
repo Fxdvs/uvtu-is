@@ -1,10 +1,8 @@
 interface FeatureListProps {
-  extended?: boolean;
+  type?: string;
 }
 
-export default function FeatureList({ extended }: FeatureListProps) {
-  if (extended == true) {
-  }
+export default function FeatureList({ type }: FeatureListProps) {
   return (
     <div className="h-full w-full flex flex-col gap-y-1 text-neutral-300 text-md">
       <div className="h-max flex items-center gap-x-3">
@@ -33,19 +31,6 @@ export default function FeatureList({ extended }: FeatureListProps) {
           <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.46 9.46 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065m-2.183 2.183c.226-.226.185-.605-.1-.75A6.5 6.5 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.5 5.5 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091zM9.06 12.44c.196-.196.198-.52-.04-.66A2 2 0 0 0 8 11.5a2 2 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z" />
         </svg>
         <h1>Komunikačný systém</h1>
-      </div>
-      <div className="h-max flex items-center gap-x-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          className="size-5"
-          viewBox="0 0 16 16"
-        >
-          <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" />
-        </svg>
-        <h1>Ekosystém</h1>
       </div>
       <div className="h-max flex items-center gap-x-3">
         <svg
@@ -88,20 +73,7 @@ export default function FeatureList({ extended }: FeatureListProps) {
         </svg>
         <h1>Bezpečnosť a súkromie</h1>
       </div>
-      <div className="h-max flex items-center gap-x-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          className="size-5"
-          viewBox="0 0 16 16"
-        >
-          <path d="M12 2h-2v3h2z" />
-          <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v13A1.5 1.5 0 0 0 1.5 16h13a1.5 1.5 0 0 0 1.5-1.5V2.914a1.5 1.5 0 0 0-.44-1.06L14.147.439A1.5 1.5 0 0 0 13.086 0zM4 6a1 1 0 0 1-1-1V1h10v4a1 1 0 0 1-1 1zM3 9h10a1 1 0 0 1 1 1v5H2v-5a1 1 0 0 1 1-1" />
-        </svg>
-        <h1>Zálohovanie dát</h1>
-      </div>
+
       <div className="h-max flex items-center gap-x-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -116,9 +88,41 @@ export default function FeatureList({ extended }: FeatureListProps) {
         </svg>
         <h1>Užívateľské rozhranie</h1>
       </div>
-      {extended == true && (
+      {(type === "home" || type === "pro") && (
         <>
-          <div className="h-max flex items-center gap-x-3 text-green-400">
+          <div className="h-max flex items-center gap-x-3 text-pink-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="size-5"
+              viewBox="0 0 16 16"
+            >
+              <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" />
+            </svg>
+            <h1>Ekosystém</h1>
+          </div>
+          <div className="h-max flex items-center gap-x-3 text-pink-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="size-5"
+              viewBox="0 0 16 16"
+            >
+              <path d="M12 2h-2v3h2z" />
+              <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v13A1.5 1.5 0 0 0 1.5 16h13a1.5 1.5 0 0 0 1.5-1.5V2.914a1.5 1.5 0 0 0-.44-1.06L14.147.439A1.5 1.5 0 0 0 13.086 0zM4 6a1 1 0 0 1-1-1V1h10v4a1 1 0 0 1-1 1zM3 9h10a1 1 0 0 1 1 1v5H2v-5a1 1 0 0 1 1-1" />
+            </svg>
+            <h1>Zálohovanie dát</h1>
+          </div>
+        </>
+      )}
+      <div className="h-max flex items-center gap-x-3"></div>
+      {type == "pro" && (
+        <>
+          <div className="h-max flex items-center gap-x-3 text-pink-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -131,7 +135,7 @@ export default function FeatureList({ extended }: FeatureListProps) {
             </svg>
             <h1>AI Asistent</h1>
           </div>
-          <div className="h-max flex items-center gap-x-3 text-green-400">
+          <div className="h-max flex items-center gap-x-3 text-pink-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
