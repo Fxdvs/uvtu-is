@@ -26,7 +26,7 @@ export default function Navbar() {
   }
   return (
     <>
-      <div className="h-12 w-full flex justify-center items-center absolute top-6 z-9999">
+      <div className="h-12 w-full flex justify-center items-center fixed top-6 z-9999">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

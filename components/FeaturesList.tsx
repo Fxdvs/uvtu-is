@@ -6,7 +6,7 @@ export default function FeatureList({ extended }: FeatureListProps) {
   if (extended == true) {
   }
   return (
-    <div className="h-full w-full flex flex-col gap-y-1 text-neutral-100 text-md">
+    <div className="h-full w-full flex flex-col gap-y-1 text-neutral-300 text-md">
       <div className="h-max flex items-center gap-x-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
