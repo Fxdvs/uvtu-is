@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-// import Image from "next/image";
+import Image from "next/image";
 // Backgrounds;
 import Prism from "@/components/ui/Prism";
 // UI
@@ -147,7 +147,7 @@ export default function Page() {
           <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-300 font-semibold">
             Mini
           </h1>
-          <FeatureList type="mini"/>
+          <FeatureList type="mini" />
         </div>
         <div className="bg-neutral-50/10 border border-neutral-50/5 h-[50%] w-96 rounded-2xl flex flex-col relative p-5 gap-y-2 shadow shadow-neutral-50/10">
           <GlowingEffect
@@ -176,7 +176,7 @@ export default function Page() {
           <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-300 font-semibold">
             Home
           </h1>
-          <FeatureList type="home"/>
+          <FeatureList type="home" />
         </div>
         <div className="bg-neutral-50/10 border border-neutral-50/5 h-[60%] w-96 rounded-2xl flex flex-col relative p-5 gap-y-2">
           {" "}
@@ -209,11 +209,11 @@ export default function Page() {
           <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-300 font-semibold">
             Pro
           </h1>
-          <FeatureList type="pro"/>
+          <FeatureList type="pro" />
         </div>
       </section>
-      <section className="h-screen w-full relative flex flex-col justify-center items-center">
-        <motion.div
+      <section className="h-screen w-full flex flex-col justify-center items-center">
+        {/* <motion.div
           className="size-full"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -232,10 +232,19 @@ export default function Page() {
             glow={1}
             offset={{ y: -50 }}
           />
+        </motion.div> */}
+        <motion.div className="size-full relative flex flex-col items-center justify-center">
+          <div className="">
+            <Image
+              src="/assets/media/desktop-body.png"
+              alt="Logo"
+              width={1000}
+              height={1000}
+              className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
+            />
+            
+          </div>
         </motion.div>
-        <div className="size-full absolute flex flex-col items-center justify-center">
-          
-        </div>
       </section>
       <Footer />
     </>
