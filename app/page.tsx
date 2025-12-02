@@ -41,6 +41,7 @@ export default function Page() {
             noise={0.1}
             glow={1}
             offset={{ y: -50 }}
+            suspendWhenOffscreen={true}
           />
         </motion.div>
 
@@ -103,6 +104,7 @@ export default function Page() {
             colorFrequency={1}
             noise={0.1}
             glow={1}
+            suspendWhenOffscreen={true}
           />
         </motion.div>
         <motion.div
@@ -231,6 +233,7 @@ export default function Page() {
             noise={0.1}
             glow={1}
             offset={{ y: -50 }}
+            suspendWhenOffscreen={true}
           />
         </motion.div>
         <div className="size-full absolute flex flex-col items-center justify-center">
