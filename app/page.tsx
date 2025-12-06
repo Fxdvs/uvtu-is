@@ -11,17 +11,18 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 import Footer from "@/components/footer";
 import { GlowingEffect } from "@/components/ui/GlowingEffect";
 import FeatureList from "@/components/FeaturesList";
+import Video from "@/components/video";
 
 export default function Page() {
   return (
     <>
-      {/* Intro */}
+      {/* Navbar */}
+      <Navbar />
       <section
         id="Intro"
         className="h-screen w-full relative flex flex-col justify-center items-center border-b border-neutral-950"
       >
-        {/* Navbar */}
-        <Navbar />
+        {/* Intro */}
 
         {/* Background */}
         <motion.div
@@ -214,39 +215,41 @@ export default function Page() {
           <FeatureList type="pro" />
         </div>
       </section>
-      <section className="h-screen w-full flex flex-col justify-center items-center">
-        {/* <motion.div
-          className="size-full"
+      <section className="h-screen w-full flex flex-col justify-center items-center relative">
+        <motion.div
+          className="size-full absolute border-t border-neutral-950"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.9 }}
           transition={{ duration: 0.5 }}
         >
           <Prism
-            animationType="rotate"
+            animationType="hover"
             timeScale={0.5}
             height={3.6}
             baseWidth={6.0}
-            scale={1.5}
+            scale={2.7}
             hueShift={0}
             colorFrequency={1}
             noise={0.1}
             glow={1}
-            offset={{ y: -50 }}
             suspendWhenOffscreen={true}
           />
-        </motion.div> */}
-        <motion.div className="size-full relative flex flex-col items-center justify-center">
-          <div className="">
-            <Image
-              src="/assets/media/desktop-body.png"
-              alt="Logo"
-              width={1000}
-              height={1000}
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
-            />
-            
-          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.2 }}
+          className="h-full relative flex flex-col justify-end"
+        >
+          <Image
+            src="/assets/media/desktop-body.png"
+            alt="Logo"
+            width={1000}
+            height={1000}
+          />
+          <Video />
         </motion.div>
       </section>
       <Footer />

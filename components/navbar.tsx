@@ -26,7 +26,7 @@ export default function Navbar() {
   }
   return (
     <>
-      <div className="h-12 w-full flex justify-center items-center fixed top-6 z-9999">
+      <div className="h-12 w-full flex justify-center items-center fixed top-6 z-30">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -64,7 +64,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.15 }}
             exit={{ opacity: 0 }}
-            className="top-0 left-0 size-full bg-neutral-50/10 backdrop-blur-3xl text-neutral-100 fixed z-9999 flex flex-col justify-center items-center"
+            className="top-0 left-0 size-full bg-neutral-50/10 backdrop-blur-3xl text-neutral-100 fixed z-30 flex flex-col justify-center items-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
