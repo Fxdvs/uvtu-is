@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export', // Pre statický export
+  trailingSlash: true, // ⬅️ ZMENIŤ na true pre Netlify
 };
 
 export default nextConfig;

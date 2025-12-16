@@ -2,8 +2,6 @@ import { getFeatureByUrl, generateFeatureParams } from "@/lib/data/features";
 import { notFound } from "next/navigation";
 
 import Feature from "@/components/pages/feature";
-
-
 export function generateStaticParams() {
   return generateFeatureParams();
 }
