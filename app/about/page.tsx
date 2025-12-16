@@ -7,7 +7,7 @@ export default function Page() {
     <>
       <Navbar />
       <section
-        className="h-[150vh] w-full relative flex flex-col justify-center items-center"
+        className="h-[100vh] w-full relative flex flex-col justify-center items-center"
         id="Intro"
       >
         
