@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "motion/react";
-import Image from "next/image";
 // Backgrounds;
 import Prism from "@/components/ui/Prism";
 // UI
@@ -12,6 +11,7 @@ import Footer from "@/components/footer";
 import { GlowingEffect } from "@/components/ui/GlowingEffect";
 import FeatureList from "@/components/FeaturesList";
 import Device from "@/components/Device";
+import PriceButton from "@/components/price-button";
 
 export default function Page() {
 
@@ -124,7 +124,7 @@ export default function Page() {
         id="Pricing"
         className="h-screen w-full flex justify-center items-center gap-4 relative"
       >
-        <Link href="/pricing" className="bg-neutral-50/10 border border-neutral-50/5 h-[40%] w-96 rounded-2xl flex flex-col relative p-5 gap-y-2 shadow shadow-neutral-50/10">
+        <div className="bg-neutral-50/10 border border-neutral-50/5 h-min w-96 rounded-2xl flex flex-col relative p-5 gap-y-3 shadow shadow-neutral-50/10">
           <GlowingEffect
             spread={75}
             glow={true}
@@ -152,8 +152,9 @@ export default function Page() {
             Mini
           </h1>
           <FeatureList type="mini" />
-        </Link>
-        <Link href="/pricing" className="bg-neutral-50/10 border border-neutral-50/5 h-[50%] w-96 rounded-2xl flex flex-col relative p-5 gap-y-2 shadow shadow-neutral-50/10">
+          <PriceButton/>
+        </div>
+        <div className="bg-neutral-50/10 border border-neutral-50/5 h-min w-96 rounded-2xl flex flex-col relative p-5 gap-y-2 shadow shadow-neutral-50/10">
           <GlowingEffect
             spread={75}
             glow={true}
@@ -181,8 +182,9 @@ export default function Page() {
             Home
           </h1>
           <FeatureList type="home" />
-        </Link>
-        <Link href="/pricing" className="bg-neutral-50/10 border border-neutral-50/5 h-[60%] w-96 rounded-2xl flex flex-col relative p-5 gap-y-2">
+          <PriceButton/>
+        </div>
+        <div className="bg-neutral-50/10 border border-neutral-50/5 h-min w-96 rounded-2xl flex flex-col relative p-5 gap-y-3">
           {" "}
           <GlowingEffect
             spread={75}
@@ -214,7 +216,8 @@ export default function Page() {
             Pro
           </h1>
           <FeatureList type="pro" />
-        </Link>
+          <PriceButton/>
+        </div>
       </section>
       {/* About us*/}
       <section className="h-screen w-full flex flex-col justify-center items-center relative">

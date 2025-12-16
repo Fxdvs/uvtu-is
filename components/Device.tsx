@@ -1,3 +1,4 @@
+"use client"
 import { useWindowSize } from "@/lib/hooks/useWindowSize";
 import Image from "next/image";
 import Video from "./video";

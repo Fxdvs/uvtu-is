@@ -12,7 +12,6 @@ const poppinsFont = Poppins({
 export const metadata: Metadata = {
   title: "UVTU",
   description: "Smart home riešenia",
-  viewport: "width=device-width, initial-scale=1.0",
   icons: {
     icon: "/assets/logo/logo.svg",
     shortcut: "/assets/logo/logo.svg",

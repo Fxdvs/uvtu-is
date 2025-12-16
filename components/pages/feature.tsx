@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import Prism from "@/components/ui/Prism";
 // Components
 import Navbar from "@/components/navbar";
+import Footer from "../footer";
 
 interface FeatureProps {
   title: string;
@@ -66,6 +67,7 @@ export default function Feature(feature: FeatureProps) {
           {feature.text}
         </motion.p>
       </section>
+      <Footer/>
     </>
   );
 }
