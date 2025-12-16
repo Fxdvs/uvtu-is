@@ -2,12 +2,10 @@ import { getFeatureByUrl, generateFeatureParams } from "@/lib/data/features";
 import { notFound } from "next/navigation";
 
 import Feature from "@/components/pages/feature";
-export function generateStaticParams() {
-  return generateFeatureParams();
-}
 
-export default function FeaturePage({ params }: { params: { url: string } }) {
-  const feature = getFeatureByUrl(params.url);
+
+export default function FeaturePage() {
+  const feature = getFeatureByUrl(generateFeatureParams()[0].url);
 
   if (!feature) return notFound();
 
