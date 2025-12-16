@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "motion/react";
-import Image from "next/image";
 // Backgrounds;
 import Prism from "@/components/ui/Prism";
 // UI
@@ -11,9 +10,10 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 import Footer from "@/components/footer";
 import { GlowingEffect } from "@/components/ui/GlowingEffect";
 import FeatureList from "@/components/FeaturesList";
-import Video from "@/components/video";
+import Device from "@/components/Device";
 
 export default function Page() {
+
   return (
     <>
       {/* Navbar */}
@@ -215,6 +215,7 @@ export default function Page() {
           <FeatureList type="pro" />
         </div>
       </section>
+      {/* About us*/}
       <section className="h-screen w-full flex flex-col justify-center items-center relative">
         <motion.div
           className="size-full absolute border-t border-neutral-950"
@@ -243,13 +244,7 @@ export default function Page() {
           transition={{ duration: 0.2 }}
           className="h-full relative flex flex-col justify-end"
         >
-          <Image
-            src="/assets/media/desktop-body.png"
-            alt="Logo"
-            width={1000}
-            height={1000}
-          />
-          <Video />
+          <Device />
         </motion.div>
       </section>
       <Footer />

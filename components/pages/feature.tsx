@@ -46,7 +46,7 @@ export default function Feature(feature: FeatureProps) {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
-            className="text-9xl text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-400 font-semibold uppercase"
+            className="text-8xl text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-400 font-semibold uppercase"
           >
             {feature.title}
           </motion.h1>
