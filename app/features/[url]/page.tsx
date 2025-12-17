@@ -4,25 +4,22 @@ import { notFound } from "next/navigation";
 import Feature from "@/components/pages/feature";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     url: string;
-  };
+  }>;
 };
 
 export async function generateStaticParams() {
   return generateFeatureParams();
 }
 
-export default function FeaturePage({ params }: PageProps) {
-  const feature = getFeatureByUrl(params.url);
+export default async function FeaturePage({ params }: PageProps) {
+  const { url } = await params;
+  const feature = getFeatureByUrl(url);
 
   if (!feature) return notFound();
 
   return (
-    <Feature
-      title={feature.title}
-      text={feature.text}
-      url={feature.url}
-    />
+    <Feature title={feature.title} text={feature.text} url={feature.url} />
   );
 }
