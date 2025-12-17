@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/components/navbar";
-import FeatureLinks from "@/components/FeatureLinks";
+import FeatureLinks from "@/components/FeaturesLinks";
 import Footer from "@/components/footer";
 import { motion } from "motion/react";
 import Prism from "@/components/ui/Prism";

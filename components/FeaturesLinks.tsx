@@ -7,8 +7,8 @@ export default function FeatureLinks() {
       {getFeatures().map((f) => (
         <Link
           className="w-full text-neutral-50/10 text-7xl text-center uppercase font-semibold hover:bg-neutral-100/10 hover:text-neutral-100   duration-200 transition-colors py-2"
-          key={f.title}
-          href={`features/${f.url}`}
+          key={f.url}
+          href={`/features/${f.url}`}
         >
           {f.title}
         </Link>
