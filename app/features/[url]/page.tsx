@@ -3,13 +3,26 @@ import { notFound } from "next/navigation";
 
 import Feature from "@/components/pages/feature";
 
+type PageProps = {
+  params: {
+    url: string;
+  };
+};
 
-export default function FeaturePage() {
-  const feature = getFeatureByUrl(generateFeatureParams()[0].url);
+export async function generateStaticParams() {
+  return generateFeatureParams();
+}
+
+export default function FeaturePage({ params }: PageProps) {
+  const feature = getFeatureByUrl(params.url);
 
   if (!feature) return notFound();
 
   return (
-    <Feature title={feature.title} text={feature.text} url={feature.url}/>
+    <Feature
+      title={feature.title}
+      text={feature.text}
+      url={feature.url}
+    />
   );
 }
